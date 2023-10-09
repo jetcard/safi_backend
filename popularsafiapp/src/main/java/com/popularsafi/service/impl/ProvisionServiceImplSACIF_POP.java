@@ -1,5 +1,6 @@
 package com.popularsafi.service.impl;
 
+import com.popularsafi.config.Conexiones;
 import com.popularsafi.model.ReporteProvision;
 import com.popularsafi.repository.IGenericRepo;
 import com.popularsafi.repository.IProvisionRepoSACIF_POP;
@@ -39,7 +40,7 @@ public class ProvisionServiceImplSACIF_POP extends CRUDImpl<ReporteProvision, Lo
     @Override
     public String ejecutarFechaSACIF_POP(String fechaParamSACIF_POP) {
         try {
-            StoredProcedureQuery storedProcedure = entityManagerSACIF_POP.createStoredProcedureQuery(Constantes.SACIF_POP+".PKG_PROVISIONES.sp_Reporte_Provisiones");
+            StoredProcedureQuery storedProcedure = entityManagerSACIF_POP.createStoredProcedureQuery(Conexiones.SACIF_POP+".PKG_PROVISIONES.sp_Reporte_Provisiones");
             storedProcedure.registerStoredProcedureParameter("cFProceso", Date.class, ParameterMode.IN);
             SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
             Date fechaProcesoSACIF_POP = dateFormat.parse(fechaParamSACIF_POP);

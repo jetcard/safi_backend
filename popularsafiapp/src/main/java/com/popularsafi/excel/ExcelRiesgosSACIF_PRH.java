@@ -3,7 +3,6 @@ package com.popularsafi.excel;
 import java.io.IOException;
 import java.util.Date;
 import java.util.List;
-
 import com.popularsafi.model.ReporteRiesgo;
 import com.popularsafi.util.Constantes;
 import com.popularsafi.util.PixelUtil;
@@ -14,10 +13,8 @@ import org.apache.poi.xssf.usermodel.XSSFCreationHelper;
 import org.apache.poi.xssf.usermodel.XSSFFont;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
-
 import jakarta.servlet.ServletOutputStream;
 import jakarta.servlet.http.HttpServletResponse;
-
 public class ExcelRiesgosSACIF_PRH {
     private XSSFWorkbook workbook;
     private XSSFSheet sheet;
